@@ -1,5 +1,6 @@
 export { default as AddIcon } from './AddIcon';
 export { default as CapaIcon } from './CapaIcon';
+export { default as CloseIcon } from './CloseIcon';
 export { default as DeleteIcon } from './DeleteIcon';
 export { default as LightIcon } from './LightIcon';
 export { default as LogOutIcon } from './LogOutIcon';
