@@ -1,0 +1,11 @@
+export { default as AddIcon } from './AddIcon';
+export { default as CapaIcon } from './CapaIcon';
+export { default as DeleteIcon } from './DeleteIcon';
+export { default as LightIcon } from './LightIcon';
+export { default as LogOutIcon } from './LogOutIcon';
+export { default as MailIcon } from './MailIcon';
+export { default as MoonIcon } from './MoonIcon';
+export { default as OutWardIcon } from './OutWardIcon';
+export { default as SendIcon } from './SendIcon';
+export { default as UserIcon } from './UserIcon';
+export { default as WarningIcon } from './WarningIcon';
