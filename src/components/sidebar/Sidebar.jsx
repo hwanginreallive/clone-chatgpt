@@ -5,7 +5,7 @@ import SidebarContent from './SidebarContent';
 import SidebarMobile from './SidebarMobile';
 import SidebarOptions from './SidebarOptions';
 const Sidebar = () => {
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
 
     const closeModal = () => {
         setIsOpen(false);

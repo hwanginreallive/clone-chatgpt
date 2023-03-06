@@ -23,20 +23,20 @@ export default function HeadlessDialog({ closeModal, isOpen }) {
                         <div className="max-w-[318px] min-h-full text-center">
                             <Transition.Child
                                 as={Fragment}
-                                enter="ease-in-out"
-                                enterFrom="translate-x-[-100%] opacity-0"
-                                enterTo="translate-x-0 opacity-100"
-                                leave="ease-out"
+                                enter="ease-out duration-500"
+                                enterFrom="translate-x-[-100%] opacity-0 "
+                                enterTo="translate-x-0 opacity-100 "
+                                leave="ease-out duration-500"
                                 leaveFrom="translate-x-0 opacity-100"
                                 leaveTo="translate-x-[-100%] opacity-0"
                             >
-                                <Dialog.Panel className="w-full max-w-md overflow-hidden text-left align-middle transition-all transform bg-[#202123] shadow-xl ">
-                                    <div className="flex items-start flex-1 w-full h-full scrollbar-trigger border-white/20">
-                                        <nav className="flex flex-col justify-between flex-1 h-full p-2 space-y-1">
+                                <Dialog.Panel className="w-full max-w-md min-h-screen  h-full text-left align-middle transition-all transform bg-[#202123] shadow-xl ">
+                                    <div className="flex items-start flex-1 w-full h-full min-h-screen scrollbar-trigger border-white/20">
+                                        <div className="flex flex-col justify-between flex-1 h-full min-h-screen p-2 space-y-1">
                                             <div className="flex items-center flex-shrink-0 gap-3 px-3 py-3 mb-2 text-sm text-white transition-colors duration-200 border rounded-md cursor-pointer hover:bg-gray-500/10 border-white/20">
                                                 <AddIcon /> New chat
                                             </div>
-                                            <div className="flex-col flex-1 min-h-[400px] overflow-y-auto border-b border-white/20">
+                                            <div className="flex-col flex-1 overflow-y-auto border-b border-white/20">
                                                 <div className="flex flex-col gap-2 text-sm text-gray-100">
                                                     <div className="flex py-3 px-3 items-center gap-3 relative rounded-md hover:bg-[#2A2B32] cursor-pointer break-all hover:pr-4 group">
                                                         <MailIcon />
@@ -79,7 +79,7 @@ export default function HeadlessDialog({ closeModal, isOpen }) {
                                                 <LogOutIcon />
                                                 Log out
                                             </div>
-                                        </nav>
+                                        </div>
                                     </div>
                                 </Dialog.Panel>
                             </Transition.Child>
