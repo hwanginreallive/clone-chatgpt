@@ -1,11 +1,23 @@
 import React from 'react';
-import { SendIcon } from '../../asset/icon';
+import { useLocation } from 'react-router-dom';
+import { RefreshIcon, SendIcon } from '../../asset/icon';
 const MessageInput = () => {
+    const { pathname } = useLocation();
+
     return (
         <div className="absolute bottom-0 left-0 w-full border-t md:border-t-0 dark:border-white/20 md:border-transparent md:dark:border-transparent md:bg-vert-light-gradient bg-white dark:bg-gray-800 md:!bg-transparent dark:md:bg-vert-dark-gradient">
             <form className="flex flex-row gap-3 pt-2 mx-2 stretch last:mb-2 md:last:mb-6 lg:mx-auto lg:max-w-3xl lg:pt-6">
-                <div className="relative flex flex-1 h-full md:flex-col">
-                    <div className="flex ml-1 mt-1.5 md:w-full md:m-auto md:mb-2 gap-0 md:gap-2 justify-center"></div>
+                <div className="relative flex flex-col flex-1 h-full">
+                    {pathname.includes('chat') && (
+                        <div className="flex ml-1 mt-1.5 md:w-full md:m-auto md:mb-2 gap-0 md:gap-2 justify-center">
+                            <button className="relative border-0 btn btn-neutral md:border">
+                                <div className="flex items-center justify-center w-full gap-2">
+                                    <RefreshIcon />
+                                    Regenerate response
+                                </div>
+                            </button>
+                        </div>
+                    )}
                     <div className="flex flex-col w-full py-2 flex-grow md:py-3 md:pl-4 relative border border-black/10 bg-white dark:border-gray-900/50 dark:text-white dark:bg-gray-700 rounded-md shadow-[0_0_10px_rgba(0,0,0,0.10)] dark:shadow-[0_0_15px_rgba(0,0,0,0.10)]">
                         <textarea
                             tabIndex="0"

@@ -8,9 +8,8 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    --tw-border-opacity: 1;
     background-color: rgba(217, 217, 227, 0.8);
-    border-color: rgba(255, 255, 255, var(--tw-border-opacity));
+    border-color: rgba(255, 255, 255, 1);
     border-radius: 9999px;
     border-width: 1px;
 }
@@ -23,4 +22,29 @@ textarea {
     border: none;
     overflow: auto;
     outline: none;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+.btn-primary {
+    background-color: rgba(16, 163, 127, 1);
+    color: rgba(255, 255, 255, 1);
+}
+.btn-neutral {
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(64, 65, 79, 1);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+.btn {
+    align-items: center;
+    border-radius: 0.25rem;
+    display: inline-flex;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding: 0.5rem 0.75rem;
+    pointer-events: auto;
 }

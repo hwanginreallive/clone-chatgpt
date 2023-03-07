@@ -1,13 +1,15 @@
 import React, { Fragment, useState } from 'react';
 import { DeleteIcon, LightIcon, LogOutIcon, MoonIcon, OutWardIcon, UserIcon } from '../../asset/icon';
-const SidebarOptions = () => {
+const SidebarOptions = ({ options }) => {
     const [isDarkMode, setIsDarkMode] = useState(false);
     return (
         <Fragment>
-            <div className="flex items-center gap-3 px-3 py-3 text-sm text-white transition-colors duration-200 rounded-md cursor-pointer hover:bg-gray-500/10">
-                <DeleteIcon />
-                <div>Clear conversations</div>
-            </div>
+            {options.length > 0 && (
+                <div className="flex items-center gap-3 px-3 py-3 text-sm text-white transition-colors duration-200 rounded-md cursor-pointer hover:bg-gray-500/10">
+                    <DeleteIcon />
+                    <div>Clear conversations</div>
+                </div>
+            )}
             <div className="flex items-center gap-3 px-3 py-3 text-sm text-white transition-colors duration-200 rounded-md cursor-pointer hover:bg-gray-500/10">
                 <div className="flex flex-row justify-between w-full">
                     <div className="flex items-center gap-3 gold-new-button">

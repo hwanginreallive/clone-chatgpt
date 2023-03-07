@@ -1,24 +1,23 @@
 import React from 'react';
 
-const CloseIcon = (props) => {
+const SmallEditIcon = () => {
     return (
         <svg
             stroke="currentColor"
             fill="none"
-            strokeWidth="1.5"
+            strokeWidth="2"
             viewBox="0 0 24 24"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="w-6 h-6 text-white"
+            className="w-4 h-4"
             height="1em"
             width="1em"
-            {...props}
             xmlns="http://www.w3.org/2000/svg"
         >
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
+            <path d="M12 20h9"></path>
+            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
         </svg>
     );
 };
 
-export default CloseIcon;
+export default SmallEditIcon;
